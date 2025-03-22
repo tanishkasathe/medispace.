@@ -1,0 +1,288 @@
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="/Users/yoginijoshi/Desktop/Eportfolio/E-portfolio files/logo.png">
+    <title>Journal - Medispace</title>
+    <link href="https://fonts.cdnfonts.com/css/wix-madefor-display" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Wix Madefor Display', sans-serif;
+            color: #5c7962;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        main {
+            margin: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 55px;
+        }
+        p {
+            font-size: medium;
+            text-align: center;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        header {
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Keep header itself transparent */
+    
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    width: fit-content; /* Ensures it only takes as much space as needed */
+    margin-left: 130px; /* Aligns left */
+    position: relative; /* Ensures navbar stays above background */
+    z-index: 1; /* Keeps navbar above */
+}
+.navbar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%; /* Starts from the right of the navbar */
+    width: 100vw; /* Extends to full viewport width */
+    height: 100%;
+    background-color: #8ab491; /* Match navbar background */
+    z-index: -1; /* Keeps it behind the navbar */
+}
+/* Navbar styles */
+
+.navbar {
+    background-color: #8ab491; /* Green background */
+    display: flex;
+    justify-content: left; /* Align navbar items to the left */
+    padding-left: 50px; /* Adjust spacing */
+    position: relative; /* Needed for the ::after extension */
+   padding: 10px;
+}
+        .navbar ul {
+            list-style-type: none;
+            background-color: #8ab491;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #5c7962;
+        }
+        .navbar li {
+            float: left;
+            margin-left: 15px;
+        }
+        h2 {
+            text-align: center;
+        }
+ 
+        img.logo {
+            position: absolute;
+            top: -10px;
+            left: -100px;
+            width: 100px;
+            height: 80px;
+        }
+
+        footer {
+            background-color: #8ab491;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+
+.container {
+    background: aliceblue;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    background: aliceblue; /* White box */
+    margin: 20px auto;
+    max-width: 900px; /* Controls width */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    border: 3px solid #8ab491;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #8ab491;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #5c7962;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.note-item {
+    background: #eaebeb;
+    padding: 20px;
+    margin-top: 5px;
+    border-radius: 5px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background: #d6737d;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 75px;
+}
+.delete-btn:hover{
+    background: #a7212f;
+}
+.journalImage {
+            position: absolute;
+            width: 300px; 
+            height: 250px; 
+            top: 50%;
+            transform: translateY(-50%);
+           
+        }
+
+        #leftImage {
+            left: 200px; 
+        }
+
+        #rightImage {
+            right: 200px; 
+        }
+    </style>
+</head>
+<body bgcolor="F9C7D4">
+    <header>
+        <div class="header-container">
+    <div class="logo">
+        <img class="logo" src="/Users/yoginijoshi/Desktop/Eportfolio/E-portfolio files/logo.png" alt="logo">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="timer.html">Timer</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+    </div>
+    </header>
+    <main>
+        <h2>Journal</h2>
+        <p>Journalling is a powerful way to reflect and introspect on your thoughts, emotions and feelings. It helps to sort out thoughts, enhancing relaxation and eliminating stress with a calm journalling session. With this journal, you are free to write whatever you desire, from to-do lists to setting goals to writing about emotions. </p>
+        <img id="leftImage" class="journalImage" src="/Users/yoginijoshi/Desktop/Eportfolio/E-portfolio files/journalflower.png" alt="Left Image">
+        <div class="container">
+            <h2>My Journal</h2>
+            <input type="text" id="noteInput" placeholder="Write an entry..." />
+            <button id="saveNote">Save Note</button>
+            <ul id="notesList"></ul>
+        </div>
+        <img id="rightImage" class="journalImage" src="/Users/yoginijoshi/Desktop/Eportfolio/E-portfolio files/journalflower.png" alt="Right Image">
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const noteInput = document.getElementById("noteInput");
+            const saveNote = document.getElementById("saveNote");
+            const notesList = document.getElementById("notesList");
+
+            // Load saved notes on page load
+            loadNotes();
+
+            // Save note when button is clicked
+            saveNote.addEventListener("click", () => {
+                let noteText = noteInput.value.trim();
+                if (noteText === "") return;
+
+                let note = {
+                    text: noteText,
+                    date: new Date().toLocaleString()
+                };
+
+                saveNoteToStorage(note);
+                addNoteToDOM(note);
+                noteInput.value = ""; // Clear input
+            });
+
+            // Function to load notes from localStorage
+            function loadNotes() {
+                let notes = JSON.parse(localStorage.getItem("notes")) || [];
+                notes.forEach(note => addNoteToDOM(note));
+            }
+
+            // Function to save note to localStorage
+            function saveNoteToStorage(note) {
+                let notes = JSON.parse(localStorage.getItem("notes")) || [];
+                notes.push(note);
+                localStorage.setItem("notes", JSON.stringify(notes));
+            }
+
+            // Function to add note to the DOM
+            function addNoteToDOM(note) {
+                let li = document.createElement("li");
+                li.classList.add("note-item");
+
+                li.innerHTML = `
+    <span>${note.text} <br> 
+        <small>${note.date}</small>
+    </span>
+    <button class="delete-btn">Delete</button>
+`;
+
+                // Delete note when button is clicked
+                li.querySelector(".delete-btn").addEventListener("click", () => {
+                    removeNoteFromStorage(note);
+                    li.remove();
+                });
+
+                notesList.appendChild(li);
+            }
+
+            // Function to remove note from localStorage
+            function removeNoteFromStorage(noteToRemove) {
+                let notes = JSON.parse(localStorage.getItem("notes")) || [];
+                notes = notes.filter(note => note.text !== noteToRemove.text || note.date !== noteToRemove.date);
+                localStorage.setItem("notes", JSON.stringify(notes));
+            }
+        });
+    </script>
+    <footer>
+        <p>&copy; 2025 Medispace. All Rights Reserved.</p>
+    </footer>
+
+    
+</body>
+</html>

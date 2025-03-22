@@ -1,0 +1,190 @@
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="/Users/yoginijoshi/Desktop/Eportfolio/E-portfolio files/logo.png">
+    <title>Exercises - Medispace</title>
+    <link href="https://fonts.cdnfonts.com/css/wix-madefor-display" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Wix Madefor Display', sans-serif;
+            color: #5c7962;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        main {
+            margin: 20px;
+        }
+        h1 {
+            font-size: 55px;
+        }
+        p {
+            font-size: medium;
+            text-align: center;
+        }
+        header {
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Keep header itself transparent */
+    
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    width: fit-content; /* Ensures it only takes as much space as needed */
+    margin-left: 130px; /* Aligns left */
+    position: relative; /* Ensures navbar stays above background */
+    z-index: 1; /* Keeps navbar above */
+}
+.navbar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%; /* Starts from the right of the navbar */
+    width: 100vw; /* Extends to full viewport width */
+    height: 100%;
+    background-color: #8ab491; /* Match navbar background */
+    z-index: -1; /* Keeps it behind the navbar */
+}
+/* Navbar styles */
+
+.navbar {
+    background-color: #8ab491; /* Green background */
+    display: flex;
+    justify-content: left; /* Align navbar items to the left */
+    padding-left: 50px; /* Adjust spacing */
+    position: relative; /* Needed for the ::after extension */
+   padding: 10px;
+}
+        .navbar ul {
+            list-style-type: none;
+            background-color: #8ab491;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #5c7962;
+        }
+        .navbar li {
+            float: left;
+            margin-left: 15px;
+        }
+        h2 {
+            text-align: center;
+
+        }
+ 
+        img.logo {
+            position: absolute;
+            top: -10px;
+            left: -100px;
+            width: 100px;
+            height: 80px;
+        }
+        .exercise-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between boxes */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    margin-top: 20px;
+}
+        .exercise-box {
+    background: aliceblue;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid #8ab491;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 600px;
+    flex: 1; /* Ensures both boxes take equal width */
+}
+
+.exercise-box iframe {
+    width: 100%;
+    height: 280px;
+    border-radius: 8px;
+}
+
+.exercise-box p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+}
+        footer {
+            background-color: #8ab491;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+        iframe{
+            align-items: center;
+        }
+    </style>
+</head>
+<body bgcolor="F9C7D4">
+    <header>
+        <div class="header-container">
+    <div class="logo">
+        <img class="logo" src="/Users/yoginijoshi/Desktop/Eportfolio/E-portfolio files/logo.png" alt="logo">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="timer.html">Timer</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+    </div>
+    </header>
+    <main>
+        <h2>Exercises</h2>
+        <p>Meditation isn't just about sitting still—it can also be an active practice. These guided exercises help you connect <br> your mind and body, reduce stress, and improve focus through mindful movement. Try these videos to bring more balance <br>and relaxation into your daily routine.</p>
+        <div class="exercise-container">
+<div class="exercise-box">
+        <iframe width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/LiUnFJ8P4gM?si=5emG7CIRvqAdpinA" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+    <p> 4-7-8 Guided Meditation for Relaxation</p>
+    </div>
+<div class="exercise-box">
+        <iframe width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/inpok4MKVLM?si=qq8e7XlnOe2LKZoH" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+    <p> 10-Minute Mindfulness Meditation</p>
+    </div>
+ </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Medispace. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
